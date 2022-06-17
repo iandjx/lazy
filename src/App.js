@@ -25,12 +25,12 @@ function App() {
       </button>
       <button onClick={() => ssetOpen(true)}>Foo</button>
       {t}
-      {console.log(aa)}
       <Suspense fallback={<div />}>
         {aa.map((ele) => {
           const A = mmap[ele];
           return <A />;
         })}
+        {sopen && <Bar />}
       </Suspense>
     </div>
   );
